@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      display: block;
+      margin: auto; 
+      margin-bottom: 2%;
+      width: 80px;
+      height: 80px;
+      justify-content: center;
+    }
+
+    #message-container {
+      width: 80%;
+      max-width: 1180px;
+      border: 4px solid rgb(198, 201, 202);
+      background-color: rgb(240, 240, 240);
+      margin-top: 0.5%;
+      height: 75vh;
+      border-radius: 50px;
+      padding: 30px;
+      overflow-y: auto;
+      margin-bottom: 30px;
+    }
+
+    #message-container div {
+      background-color: rgb(155, 222, 253);
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 150%;
+      margin-bottom: 1%;
+      float: left; 
+      clear: both;
+    }
+
+    #message-container div:nth-child(2n) {
+      background-color: rgb(59, 165, 192);
+      border-radius: 20px;
+      font-size: 150%;
+      float: right;
+      clear: both;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: rgb(255, 255, 255);
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+      width: 70%;
+      border: 4px solid rgb(198, 201, 202);
+      border-radius: 30px;
+      height: 50px;
+      font-size: 200%;
+    }
+
+    #send-button {
+      width: 15%;
+      border: 4px solid rgb(198, 201, 202);
+      border-radius: 30px;
+      height: 60px;
+      font-size: 200%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="message-container">
+    <img class="logo" src="logo.png" alt="Real-Time_Chat_Application">
+  </div>
+
+  <form id="send-container">
+    <input type="text" id="message-input"> 
+    <button type="submit" id="send-button">Send</button>
+    <!--<audio src="ringtone.mp3" autoplay></audio>-->
+  </form>
+
+</body>
+</html>
